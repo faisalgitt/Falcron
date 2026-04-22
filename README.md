@@ -5,7 +5,7 @@
   A feature-rich, modular Discord bot built with Discord.js.
   Designed for invite tracking, community management, and server automation.
 
-  [![Discord](https://img.shields.io/discord/1234567890?color=5865F2&label=Support&logo=discord&logoColor=white)](https://discord.gg/aerox)
+  [![Discord](https://img.shields.io/discord/1414217749038891102?color=5865F2&label=Support&logo=discord&logoColor=white)](https://discord.gg/aerox)
 
   </div>
 
