@@ -26,6 +26,7 @@ class AddInvitesCommand extends Command {
                         slashData: {
                                 name: 'addinvites',
                                 description: 'Add invites to a user',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                                 options: [
                                         {
                                                 type: ApplicationCommandOptionType.User,
