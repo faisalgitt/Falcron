@@ -23,6 +23,7 @@ class GreetResetCommand extends Command {
                         slashData: {
                                 name: 'greetreset',
                                 description: 'Reset all greet settings for this server',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                         },
                 });
         }
