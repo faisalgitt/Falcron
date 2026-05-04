@@ -24,6 +24,7 @@ class GreetCommand extends Command {
                         slashData: {
                                 name: 'greet',
                                 description: 'Set the channel where greet messages will be sent',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                                 options: [
                                         {
                                                 type: ApplicationCommandOptionType.Channel,
