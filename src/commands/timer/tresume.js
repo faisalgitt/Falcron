@@ -1,7 +1,7 @@
 // Falcron | AeroX Development
 // Author: itsfizys
 import { Command } from '#command';
-import { MessageFlags } from 'discord.js';
+import { MessageFlags, PermissionFlagsBits } from 'discord.js';
 import { emoji } from '#emoji';
 import { timerStore, buildStartComponents, buildEndComponents, formatTime } from '#timerUtils';
 
@@ -14,10 +14,13 @@ class TResumeCommand extends Command {
                         cooldown: 5,
                         minArgs: 1,
                         examples: ['tresume 1150000000000000000'],
+                        userPermissions: [PermissionFlagsBits.ManageGuild],
+                        permissions: [PermissionFlagsBits.ManageGuild],
                         enabledSlash: true,
                         slashData: {
                                 name: 'tresume',
                                 description: 'Resumes a paused timer',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                                 options: [
                                         {
                                                 type: 3,
