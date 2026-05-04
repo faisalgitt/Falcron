@@ -8,6 +8,7 @@ import {
         SeparatorBuilder,
         SeparatorSpacingSize,
         ApplicationCommandOptionType,
+        PermissionFlagsBits,
 } from 'discord.js';
 import { addUserMessageCount } from '#utils';
 
@@ -39,11 +40,13 @@ class AddMessagesCommand extends Command {
                         cooldown: 5,
                         minArgs: 2,
                         examples: ['addmessages @user 50'],
-                        userPermissions: ['Administrator'],
+                        userPermissions: [PermissionFlagsBits.Administrator],
+                        permissions: [PermissionFlagsBits.Administrator],
                         enabledSlash: true,
                         slashData: {
                                 name: 'addmessages',
                                 description: 'Manually add messages to a user\'s server count',
+                                defaultMemberPermissions: PermissionFlagsBits.Administrator,
                                 options: [
                                         {
                                                 type: ApplicationCommandOptionType.User,
