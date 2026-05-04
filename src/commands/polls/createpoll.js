@@ -15,6 +15,7 @@ import {
         ModalBuilder,
         TextInputBuilder,
         TextInputStyle,
+        PermissionFlagsBits,
 } from 'discord.js';
 import { disableComponents, logger } from '#utils';
 
@@ -31,10 +32,13 @@ class CreatePollCommand extends Command {
                         description: 'Build and launch a  Discord poll',
                         usage: 'createpoll',
                         cooldown: 5,
+                        userPermissions: [PermissionFlagsBits.ManageGuild],
+                        permissions: [PermissionFlagsBits.ManageGuild],
                         enabledSlash: true,
                         slashData: {
                                 name: 'createpoll',
                                 description: 'Build and launch a Discord poll',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                         },
                 });
         }
