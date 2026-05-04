@@ -24,6 +24,7 @@ class DisableGreetCommand extends Command {
                         slashData: {
                                 name: 'disablegreet',
                                 description: 'Remove a greet channel configuration',
+                                defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
                                 options: [
                                         {
                                                 type: ApplicationCommandOptionType.Channel,
