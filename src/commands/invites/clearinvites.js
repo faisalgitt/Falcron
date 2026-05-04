@@ -1,7 +1,7 @@
 // Falcron | AeroX Development
 // Author: itsfizys
 import { Command } from '#command';
-import { ApplicationCommandOptionType } from 'discord.js';
+import { ApplicationCommandOptionType, PermissionFlagsBits } from 'discord.js';
 import { emoji } from '#emoji';
 import { db } from '#dbManager';
 
@@ -30,11 +30,13 @@ class ClearInvitesCommand extends Command {
                         cooldown: 5,
                         minArgs: 1,
                         examples: ['clearinvites @user'],
-                        userPermissions: ['Administrator'],
+                        userPermissions: [PermissionFlagsBits.Administrator],
+                        permissions: [PermissionFlagsBits.Administrator],
                         enabledSlash: true,
                         slashData: {
                                 name: 'clearinvites',
                                 description: "Reset a user's invite count in this server",
+                                defaultMemberPermissions: PermissionFlagsBits.Administrator,
                                 options: [
                                         {
                                                 type: ApplicationCommandOptionType.User,
